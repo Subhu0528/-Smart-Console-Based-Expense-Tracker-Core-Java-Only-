@@ -4,24 +4,19 @@
 This project is a console-based Expense Tracker built entirely in Core Java. It does not use Java Collections or external libraries and involves implementing custom data structures, file-based persistence, and real-world expense tracking features.
 
 ## Features Implemented
+**```** 
 User Registration & Login with simple password hashing.
-
 Add Expenses with amount, category, description, date, recurring flag.
-
 Generate Monthly Reports (category totals, total expense, highest expense).
-
 Category Insights (most used category, average per category).
-
 Savings Goal Feature with goal comparison.
-
 Recurring Expense Tracking.
-
 Sorting of Expenses by Amount and Date (custom sorting logic).
-
 Data Persistence in .txt files.
+**```** 
 
 ## Folder Structure
-'''
+**```**
 ExpenseTracker/
 │
 ├── main/
@@ -50,17 +45,16 @@ ExpenseTracker/
 ├── expenses_<username>.txt
 ├── users.txt
 ├── goal_<username>.txt
-'''
+**```** 
 
 ## Custom Data Structures
 
 Since I could not use Java’s built-in ArrayList or LinkedList, I created my own linked list from scratch. This structure is used to manage lists of Expenses, Users, and file data lines.
 
 ➡️ How does it work?
-
 Node class: It has a data field and a pointer next to the next node.
 The MyLinkedList<T> manages a chain of these nodes.
-
+**```** 
 Supports:
 -add(T data) → Adds element at the end.
 -get(int index) → Access element by index.
@@ -68,13 +62,13 @@ Supports:
 -remove(int index) → Remove element at index.
 -size() → Returns total number of elements.
 -forEach() → For manual iteration.
-
+**```** 
 ➡️ Where is it used?
 -UserService: To store & search registered users.
 -ExpenseService: To load and store all expens
 -FileUtil: To read file lines into a custom list.
 
-
+**```** 
 2. MyHashMap<K, V>
    Needed a key-value mapping structure to track:
    - Total amount per category
@@ -95,7 +89,7 @@ Supports:
 -ReportService: For category-wise totals & counts.
 -Category Insights: To find most-used category.
 -Savings Goal Comparison: Stores user goals (optional).
-
+**```** 
 
 
 ## 🧠 Approach
