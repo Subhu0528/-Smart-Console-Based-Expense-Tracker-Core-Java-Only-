@@ -26,7 +26,7 @@ public class SavingGoalService {
             return;
         }
 
-        System.out.println("Savings Goal: ₹" + goal);
+        System.out.println("Savings Goal: Rs. " + goal);
         if (monthlyExpense <= goal) {
             System.out.println("You are within your savings goal! Saved Rs. " + (goal - monthlyExpense));
         } else {
