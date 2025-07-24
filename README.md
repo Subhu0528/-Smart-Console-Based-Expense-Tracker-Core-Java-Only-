@@ -1,6 +1,6 @@
 # Smart Console-Based Expense Tracker (Core Java Only)
 
-🧩 Objective
+##🧩 Objective
 This project is a console-based Expense Tracker built entirely in Core Java. It does not use Java Collections or external libraries and involves implementing custom data structures, file-based persistence, and real-world expense tracking features.
 
 🚀 Features Implemented
