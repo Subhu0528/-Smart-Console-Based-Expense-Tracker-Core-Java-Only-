@@ -1,9 +1,9 @@
 # Smart Console-Based Expense Tracker (Core Java Only)
 
-##🧩 Objective
+# Objective
 This project is a console-based Expense Tracker built entirely in Core Java. It does not use Java Collections or external libraries and involves implementing custom data structures, file-based persistence, and real-world expense tracking features.
 
-🚀 Features Implemented
+# Features Implemented
 User Registration & Login with simple password hashing.
 
 Add Expenses with amount, category, description, date, recurring flag.
@@ -20,10 +20,8 @@ Sorting of Expenses by Amount and Date (custom sorting logic).
 
 Data Persistence in .txt files.
 
-🏗️ Folder Structure
-php-template
-Copy
-Edit
+# Folder Structure
+
 ExpenseTracker/
 │
 ├── main/
@@ -52,7 +50,9 @@ ExpenseTracker/
 ├── expenses_<username>.txt
 ├── users.txt
 ├── goal_<username>.txt
-🔧 Custom Data Structures
+
+
+# Custom Data Structures
 1. MyLinkedList<T>
 A custom implementation of a singly linked list.
 
