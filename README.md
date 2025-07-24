@@ -53,9 +53,11 @@ ExpenseTracker/
 
 
 ## Custom Data Structures
+
 Since I could not use Java’s built-in ArrayList or LinkedList, I created my own linked list from scratch. This structure is used to manage lists of Expenses, Users, and file data lines.
 
 ➡️ How does it work?
+
 Node class: It has a data field and a pointer next to the next node.
 The MyLinkedList<T> manages a chain of these nodes.
 
