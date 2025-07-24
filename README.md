@@ -1,9 +1,9 @@
 # Smart Console-Based Expense Tracker (Core Java Only)
 
-# Objective
+## Objective
 This project is a console-based Expense Tracker built entirely in Core Java. It does not use Java Collections or external libraries and involves implementing custom data structures, file-based persistence, and real-world expense tracking features.
 
-# Features Implemented
+## Features Implemented
 User Registration & Login with simple password hashing.
 
 Add Expenses with amount, category, description, date, recurring flag.
@@ -20,7 +20,7 @@ Sorting of Expenses by Amount and Date (custom sorting logic).
 
 Data Persistence in .txt files.
 
-# Folder Structure
+## Folder Structure
 
 ExpenseTracker/
 │
@@ -52,56 +52,78 @@ ExpenseTracker/
 ├── goal_<username>.txt
 
 
-# Custom Data Structures
-1. MyLinkedList<T>
-A custom implementation of a singly linked list.
+## Custom Data Structures
+Since I could not use Java’s built-in ArrayList or LinkedList, I created my own linked list from scratch. This structure is used to manage lists of Expenses, Users, and file data lines.
 
-Supports methods like add(), get(), set(), remove(), and custom forEach().
+➡️ How does it work?
+Node class: It has a data field and a pointer next to the next node.
+The MyLinkedList<T> manages a chain of these nodes.
 
-Used for managing expense lists, user lists, and reading file lines.
+Supports:
+-add(T data) → Adds element at the end.
+-get(int index) → Access element by index.
+-set(int index, T data) → Update data at a specific index.
+-remove(int index) → Remove element at index.
+-size() → Returns total number of elements.
+-forEach() → For manual iteration.
+
+➡️ Where is it used?
+-UserService: To store & search registered users.
+-ExpenseService: To load and store all expens
+-FileUtil: To read file lines into a custom list.
+
 
 2. MyHashMap<K, V>
-A basic Hash Map with separate chaining.
+   Needed a key-value mapping structure to track:
+   - Total amount per category
+   - Count of expenses per category
+   - Custom “get or default” logic.
 
-Custom put(), get(), getOrDefault(), and keySet() methods.
+➡️ How does it work?
+Array of linked lists (buckets) to handle collisions (Separate Chaining). Simple hash function based on key’s hashcode.
 
-Used to track category totals, counts for insights, and more.
+Supports:
+-put(K key, V value) → Insert or update key.
+-get(K key) → Retrieve value by key.
+-getOrDefault(K key, V defaultValue) → If key not found, return default.
+-containsKey(K key) → Check key presence.
+-keySet() → Get all keys as a String array.
 
-🧠 Approach
-All expense and user data are persisted in .txt files.
+➡️ Where is it used?
+-ReportService: For category-wise totals & counts.
+-Category Insights: To find most-used category.
+-Savings Goal Comparison: Stores user goals (optional).
 
-Passwords are hashed using a simple multiplication-based hashing algorithm.
 
-No Java Collections are used. All lists and maps are custom-built.
 
-Recurring expenses are marked with a flag and shown during monthly reports.
+## 🧠 Approach
+-All expense and user data are persisted in .txt files.
+-Passwords are hashed using a simple multiplication-based hashing algorithm.
+-No Java Collections are used. All lists and maps are custom-built.
+-Recurring expenses are marked with a flag and shown during monthly reports.
+-Savings goals are stored per user and checked during report generation.
+-Sorting is implemented using a custom bubble sort on MyLinkedList.
 
-Savings goals are stored per user and checked during report generation.
-
-Sorting is implemented using a custom bubble sort on MyLinkedList.
-
-📝 Sample Input/Output
+## 📝 Sample Input/Output
 User Flow Example:
-vbnet
-Copy
-Edit
-1. Register
-Username: john
-Password: john123
+
+### 1. Register
+Username: Subhu05
+Password: Subhu05
 
 2. Login
-Username: john
-Password: john123
+Username: Subhu05
+Password: Subhu05
 
 3. Add Expense
 Amount: 1500
 Category: Food
-Description: Lunch at Café
+Description: Lunch at Cafe
 Date: 15-07-2025
 Recurring: No
 
 4. Generate Monthly Report
-> Report saved as reports/monthly_john_07-2025.txt
+> Report saved as reports/monthly_Subhu05_07-2025.txt
 
 5. View Category Insights
 > Most Used Category: Food
@@ -109,10 +131,8 @@ Recurring: No
 
 6. Set Savings Goal
 > Goal set to ₹10000
+
 Report File Example:
-yaml
-Copy
-Edit
 ==== Monthly Expense Summary ====
 User: john
 Month: 07-2025
