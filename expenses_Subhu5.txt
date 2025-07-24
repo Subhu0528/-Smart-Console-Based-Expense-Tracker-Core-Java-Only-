@@ -1,0 +1,4 @@
+1000.0,Food,Lunch in mall cafe,1753337242228,false
+4000.0,rent,rent of july,1753337779016,true
+5000.0,Travel,Travelling to Kolkata,1753337889495,false
+2000.0,cycle,Bought a second hand cycle,1753338266893,false

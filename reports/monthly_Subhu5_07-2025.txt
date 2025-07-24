@@ -1,0 +1,12 @@
+==== Monthly Expense Summary ====
+User: Subhu5
+Month: 07-2025
+
+Category-wise Breakdown:
+- Travel: Rs. 5000.0
+- cycle: Rs. 2000.0
+- rent: Rs. 4000.0
+- Food: Rs. 1000.0
+
+Total Monthly Expense: Rs.12000.0
+Highest Expense: Rs. 5000.0 (Travel)

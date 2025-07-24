@@ -1,0 +1,9 @@
+==== Monthly models.Expense Summary ====
+models.User: Subhu05
+Month: 07-2025
+
+Category-wise Breakdown:
+- Food: ?1220.0
+
+Total Monthly models.Expense: ?1220.0
+Highest models.Expense: ?1220.0 (Food)
