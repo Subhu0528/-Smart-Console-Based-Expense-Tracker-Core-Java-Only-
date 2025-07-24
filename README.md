@@ -14,47 +14,15 @@ This project is a console-based Expense Tracker built entirely in Core Java. It 
 **Sorting of Expenses by Amount and Date (custom sorting logic).**
 **Data Persistence in .txt files.**
 
-
-## Folder Structure
-**
-ExpenseTracker/
-│
-├── main/
-│   └── MainApp.java
-│
-├── models/
-│   ├── User.java
-│   ├── Expense.java
-│
-├── datastructures/
-│   ├── MyLinkedList.java
-│   ├── MyHashMap.java
-│
-├── utils/
-│   ├── FileUtil.java
-│   ├── InputValidator.java
-│   ├── Hasher.java
-│
-├── service/
-│   ├── UserService.java
-│   ├── ExpenseService.java
-│   ├── ReportService.java
-│   ├── GoalService.java
-│
-├── reports/  (Generated Reports)
-├── expenses_<username>.txt
-├── users.txt
-├── goal_<username>.txt
-**
-
 ## Custom Data Structures
 
+1. MyLinkedList<T>
 Since I could not use Java’s built-in ArrayList or LinkedList, I created my own linked list from scratch. This structure is used to manage lists of Expenses, Users, and file data lines.
 
 ➡️ How does it work?
 Node class: It has a data field and a pointer next to the next node.
 The MyLinkedList<T> manages a chain of these nodes.
-**```** 
+
 Supports:
 -add(T data) → Adds element at the end.
 -get(int index) → Access element by index.
@@ -62,13 +30,12 @@ Supports:
 -remove(int index) → Remove element at index.
 -size() → Returns total number of elements.
 -forEach() → For manual iteration.
-**```** 
+
 ➡️ Where is it used?
 -UserService: To store & search registered users.
 -ExpenseService: To load and store all expens
 -FileUtil: To read file lines into a custom list.
 
-**```** 
 2. MyHashMap<K, V>
    Needed a key-value mapping structure to track:
    - Total amount per category
