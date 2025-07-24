@@ -21,7 +21,7 @@ Sorting of Expenses by Amount and Date (custom sorting logic).
 Data Persistence in .txt files.
 
 ## Folder Structure
-
+'''
 ExpenseTracker/
 │
 ├── main/
@@ -50,7 +50,7 @@ ExpenseTracker/
 ├── expenses_<username>.txt
 ├── users.txt
 ├── goal_<username>.txt
-
+'''
 
 ## Custom Data Structures
 
