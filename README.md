@@ -4,19 +4,19 @@
 This project is a console-based Expense Tracker built entirely in Core Java. It does not use Java Collections or external libraries and involves implementing custom data structures, file-based persistence, and real-world expense tracking features.
 
 ## Features Implemented
-**```
-User Registration & Login with simple password hashing.
-Add Expenses with amount, category, description, date, recurring flag.
-Generate Monthly Reports (category totals, total expense, highest expense).
-Category Insights (most used category, average per category).
-Savings Goal Feature with goal comparison.
-Recurring Expense Tracking.
-Sorting of Expenses by Amount and Date (custom sorting logic).
-Data Persistence in .txt files.
-'''** 
+
+**User Registration & Login with simple password hashing.**
+**Add Expenses with amount, category, description, date, recurring flag.**
+**Generate Monthly Reports (category totals, total expense, highest expense).**
+**Category Insights (most used category, average per category).**
+**Savings Goal Feature with goal comparison.**
+**Recurring Expense Tracking.**
+**Sorting of Expenses by Amount and Date (custom sorting logic).**
+**Data Persistence in .txt files.**
+
 
 ## Folder Structure
-**```**
+**
 ExpenseTracker/
 │
 ├── main/
@@ -45,7 +45,7 @@ ExpenseTracker/
 ├── expenses_<username>.txt
 ├── users.txt
 ├── goal_<username>.txt
-**```** 
+**
 
 ## Custom Data Structures
 
